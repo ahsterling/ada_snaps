@@ -1,0 +1,10 @@
+<h2>See the snaps!</h2>
+
+<% @snaps.each do |snap| %>
+  <p><%= snap.content %></p>
+<% end %>
+
+<%= bootstrap_form_for @snap do |f| %>
+  <%= f.text_area :content, label: "New Snap:" %>
+  <%= f.submit %>
+<% end %>

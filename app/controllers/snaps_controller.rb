@@ -1,7 +1,8 @@
 class SnapsController < ApplicationController
 
   def index
-    
+    @snaps = Snap.all
+    @snap = Snap.new
   end
 
   def show
