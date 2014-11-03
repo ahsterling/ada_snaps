@@ -1,10 +1,32 @@
-<h2>See the snaps!</h2>
+<div class = "row">
 
-<% @snaps.each do |snap| %>
-  <p><%= snap.content %></p>
-<% end %>
 
-<%= bootstrap_form_for @snap do |f| %>
-  <%= f.text_area :content, label: "New Snap:" %>
-  <%= f.submit %>
-<% end %>
+  <div class = "col-xs-7">
+    <h2>See the snaps!</h2>
+    <% @snaps.each do |snap| %>
+      <div class = "box col-xs-12">
+        <div class = "row icon">
+          <%= link_to image_tag(snap.imageurl), snap, class: "box-picture" %>
+        </div>
+        <div class = "row">
+          <p><%= link_to snap.content, snap %></p>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+  <h2>Add Your Own:</h2>
+  <div class = "col-xs-5">
+
+    <%= bootstrap_form_for @snap do |f| %>
+      <%= f.text_area :content, label: "What's your snap?" %>
+      <%= f.radio_button :imageurl, 'heart.png', label: image_tag('heart.png') %>
+      <%= f.radio_button :imageurl, 'smile.png', label: image_tag('smile.png') %>
+      <%= f.radio_button :imageurl, 'ghost.png', label: image_tag('ghost.png') %>
+      <%= f.radio_button :imageurl, 'tongue.png', label: image_tag('tongue.png') %>
+      <%= f.radio_button :imageurl, 'thumb.png', label: image_tag('thumb.png') %>
+      <%= f.submit %>
+
+    <% end %>
+  </div>
+</div>

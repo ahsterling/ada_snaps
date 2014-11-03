@@ -14,3 +14,38 @@
  *= require_self
  *= require rails_bootstrap_forms
  */
+body {
+  font-family: 'Arvo', serif;
+}
+.box {
+
+  border-radius: 5px;
+  width: 215px;
+  height: 215px;
+  margin: 5px;
+  background-color: #b976db;
+}
+
+.box .row {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: black;
+}
+
+.radio {
+  display: block;
+}
+
+.btn {
+  display: block;
+}
+
+.box-picture {
+  margin-left: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
+}

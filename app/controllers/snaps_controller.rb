@@ -6,15 +6,14 @@ class SnapsController < ApplicationController
   end
 
   def show
-
-  end
-
-  def new
-
+    @snap = Snap.find(params[:id])
   end
 
   def create
-
+    @snap = Snap.new(params.require(:snap).permit(:content, :imageurl))
+    if @snap.save
+      redirect_to root_path
+    end
   end
 
 end
