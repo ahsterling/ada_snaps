@@ -17,6 +17,18 @@
 body {
   font-family: 'Arvo', serif;
 }
+
+.name {
+  display: inline-block;
+
+  padding-top: 20px;
+
+}
+
+.logo {
+  display: inline-block;
+
+}
 .box {
 
   border-radius: 5px;
@@ -48,4 +60,8 @@ a {
   margin-left: 60px;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.page {
+  margin-top: 100px;
 }
